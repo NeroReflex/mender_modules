@@ -9,7 +9,7 @@ This is the main module that updates the deployment that will be run on the next
 For deployment to work there are a few prerequisites:
   - The subvolid=5 of the disk containing rootfs __MUST__ be mounted on */base*
   - */base* directory __MUST__ contain *deployments* directory where deployments are being stored
-  - Every deployment __MUST__ contains an executable file named */var/lib/mender/deployment/install.sh*
+  - Every deployment __MUST__ contains an executable file named */var/lib/mender/deployment/install*
 
 To create a deployment write the rootfs into a btrfs subvolume (for example /mnt/osname_123dfa) and then use btrfs send:
 

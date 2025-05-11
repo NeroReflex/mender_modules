@@ -107,9 +107,9 @@ case "$STATE" in
             exit 1
         fi
 
-        INSTALL_SCRIPT="${SUBVOL}/var/lib/mender/deployment/install.sh"
+        INSTALL_SCRIPT="${SUBVOL}/var/lib/mender/deployment/install"
         if [[ -x "${INSTALL_SCRIPT}" ]]; then
-            bash "${INSTALL_SCRIPT}"
+            "${INSTALL_SCRIPT}" "$MAIN_SUBVOL" "$SUBVOL" "$DEPLOYMENT_NAME"
         else
             echoerr "File ${INSTALL_SCRIPT} is not a valid executable file"
             exit 1
